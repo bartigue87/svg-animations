@@ -1,3 +1,7 @@
+.container {
+  display: flex;
+}
+
 .square {
   stroke-dasharray: 650;
   stroke-dashoffset: -650;
@@ -31,5 +35,31 @@
   to {
     stroke-dashoffset: 0;
     transform: rotate(360deg);
+  }
+}
+
+.monkey {
+  stroke: rgba(165, 42, 42);
+  stroke-width: 2px;
+  stroke-dashoffset: -2000;
+  stroke-dasharray: 2000;
+  /* animation in detail */
+  animation-name: monkey;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation-timing-function: ease-in; */
+  /* animation-fill-mode: forwards; */
+}
+
+@keyframes monkey {
+  0% {
+    stroke-dashoffset: -2000;
+  }
+  50% {
+    stroke: green;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }
