@@ -1,5 +1,7 @@
 .container {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .square {
@@ -61,5 +63,18 @@
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+circle {
+  animation: move-circle 3s alternate infinite;
+}
+
+@keyframes move-circle {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(500px);
   }
 }
